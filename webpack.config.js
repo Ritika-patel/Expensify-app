@@ -4,9 +4,6 @@ const path = require('path')
 
 module.exports ={
     mode: 'development',
-    devServer:{
-        historyApiFallback:  true
-    },
     entry: path.join(__dirname, '/src/app.js'),
     module: {
         rules: [
@@ -31,6 +28,8 @@ module.exports ={
     },
     devtool:'eval-cheap-module-source-map',
     devServer:{
-      contentBase: path.join(__dirname, 'public')
+      contentBase: path.join(__dirname, 'public'),
+      historyApiFallback:  true
+
     }
 }
